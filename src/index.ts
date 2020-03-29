@@ -18,4 +18,3 @@ export function doSomeStuff(
   }
   return true;
 }
-// TODO: more examples

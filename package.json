@@ -10,7 +10,7 @@
   "license": "Apache-2.0",
   "keywords": [],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "check": "gts check",
     "clean": "gts clean",
     "compile": "tsc -p .",
@@ -20,8 +20,16 @@
     "posttest": "npm run check"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/node": "^10.0.3",
+    "babel-jest": "^25.2.4",
     "gts": "^1.1.2",
-    "typescript": "~3.7.0",
-    "@types/node": "^10.0.3"
+    "jest": "^25.2.4",
+    "typescript": "~3.7.0"
+  },
+  "dependencies": {
+    "@types/jest": "^25.1.4"
   }
 }
