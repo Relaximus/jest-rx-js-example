@@ -20,4 +20,19 @@ helping jest to handle TS :)
 jest --init
 npm i -D babel-jest @babel/core @babel/preset-env
 npm i -D @babel/preset-typescript
+npm i -D ts-jest @types/jest
+npx ts-jest config:init
+```
+create babel.config.js in the root of project.
+```javascript
+// babel.config.js
+module.exports = {
+  preset: 'ts-jest',
+  rootDir: './src',
+  testMatch: [
+    "**/__tests__/**/*.[jt]s?(x)",
+    "**/?(*.)+(spec|test).[tj]s?(x)"
+  ],
+  testEnvironment: 'node',
+};
 ```
