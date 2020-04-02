@@ -6,10 +6,6 @@ import {flatDiscount} from "./services/discounts";
 import { expect as chaiExpect} from 'chai';
 import {catchError} from "rxjs/operators";
 
-const TS = new TestScheduler((actual, expected) => {
-    expect(actual).toEqual(expected);
-});
-
 jest.mock("./api/prices");
 
 describe('simple tests', () => {
@@ -54,7 +50,7 @@ describe('simple tests', () => {
 
             // let's imagine, we are building stream with error handling
             const stream = flatDiscount().pipe(
-                catchError(err => cold('a-b',{a: 'A', b: 'B'}))
+                catchError(() => cold('a-b',{a: 'A', b: 'B'}))
             );
             expectObservable(stream).toBe('1-2-3-4-5',{
                 1: 90,
