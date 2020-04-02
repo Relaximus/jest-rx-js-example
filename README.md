@@ -5,7 +5,7 @@
 ## How to run
 
 ```
-npm run jest
+npm run test
 ```
 
 ## Steps to build this kind of project
@@ -35,4 +35,10 @@ module.exports = {
   ],
   testEnvironment: 'node',
 };
+```
+
+for more sofisticated expectations checks let's use chai:
+
+```cmd
+npm i -D chai @types/chai
 ```
